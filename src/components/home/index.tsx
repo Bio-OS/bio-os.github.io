@@ -112,8 +112,8 @@ const Home = () => {
               src={require("../../images/logo/volc.png")}
             ></img>
             <img
-              className="h-[24px]"
-              src={require("../../images/logo/intel.png")}
+              className="h-[22px]"
+              src={require("../../images/logo/intelIcon.png")}
             ></img>
           </div>
           <div className="flex items-center">
