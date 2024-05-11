@@ -1,0 +1,55 @@
+.home {
+  position: relative;
+  width: 1344px;
+  padding-top: 200px;
+  padding-left: 112px;
+  .logo {
+    position: absolute;
+    top: 75px;
+    left: 112px;
+  }
+  .timer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+  }
+  .timer-divider {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: 122px;
+  }
+  .timer-cover {
+    z-index: 2;
+    position: absolute;
+    top: 53%;
+    right: 132px;
+  }
+  .timer-text {
+    position: absolute;
+    z-index: 3;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    top: 36%;
+    right: 164px;
+  }
+  .timer-day {
+    position: absolute;
+    z-index: 3;
+    font-weight: 500;
+    font-size: 120px;
+    color: white;
+    top: 37%;
+    right: 144px;
+  }
+}
+
+.button-bg {
+  background: linear-gradient(120deg, #5395f7 10%,#a0cef9 70%,#a2aff9 90%, #5395f7 99%);
+}
+
+.desc-bg {
+  background: linear-gradient(70deg, #e2e9fc 30%,#e8eefc 50%,#d9dcf6 80%, #e2e9fc 99%);
+}

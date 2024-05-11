@@ -1,0 +1,32 @@
+[
+  {
+    "text": "指南",
+    "link": "https://www.volcengine.com/docs/6971/164533"
+  },
+  {
+    "text": "活动",
+    "link": "/activity/",
+    "activeMatch": "/activity/"
+  },
+  {
+    "text": "博客",
+    "link": "/blog/",
+    "activeMatch": "/blog/"
+  },
+  {
+    "text": "关于",
+    "link": "/about/",
+    "activeMatch": "/about/"
+  },
+  {
+    "text": "生态",
+    "link": "/ecosystem/",
+    "items": [
+      {
+        "text": "Bio-mate",
+        "link": "https://github.com/Bio-OS/bio-mate"
+      }
+    ],
+    "activeMatch": "/ecosystem/"
+  }
+]

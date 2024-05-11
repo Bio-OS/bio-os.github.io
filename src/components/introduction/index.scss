@@ -1,0 +1,27 @@
+.active-card {
+  background: linear-gradient(to right bottom, #88c4fa,#8c94fb);
+}
+.unactive-card {
+  background: linear-gradient(to right bottom, #acbcca,#adb1cd);
+}
+.iframeWrapper {
+  position: relative;
+  .iframeHideHeader {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 65px;
+    width: 1229px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    background: white;
+  }
+}
+.desc-bg {
+  background: linear-gradient(70deg, #e2e9fc 30%,#e8eefc 50%,#d9dcf6 80%, #e2e9fc 99%);
+}
+.iframe-bg {
+  background: linear-gradient(to right, #c8dffb 30%,#cfdffc 50%,#d0d9fc 80%, #cbd1fc 99%);
+}

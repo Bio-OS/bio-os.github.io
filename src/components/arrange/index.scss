@@ -1,0 +1,68 @@
+.arrange-card {
+  position: relative;
+  .text {
+    position: absolute;
+    bottom: 32px;
+    left: 25px;
+    right: 25px;
+  }
+}
+.arco-steps > .arco-steps-item:not(:last-child) > .arco-steps-item-tail {
+  height: 6px;
+}
+.arco-steps-item-finish .arco-steps-icon {
+  background: linear-gradient(to bottom, #6670fb, #77b9fa);
+  color: white;
+  border: none;
+}
+.arco-steps-item-process .arco-steps-icon {
+  background: linear-gradient(to bottom, #6670fb, #77b9fa);
+  border: none;
+}
+.arco-steps-item-wait .arco-steps-icon {
+  background: linear-gradient(to right, #cadffc, #d8d4f9);
+  border: none;
+}
+
+.arco-steps > .arco-steps-item:not(:last-child) > .arco-steps-item-tail::after {
+  background: linear-gradient(to right, #cbdcfc, #d8d4f9);
+}
+.arco-steps-item:not(:last-child).arco-steps-item-finish .arco-steps-item-tail::after{
+  background: #77b9fa;
+}
+
+.card-wrapper {
+  background: #f1f1fb;
+  padding: 20px;
+  height: 218px;
+  width: 312px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  &.active {
+    background: linear-gradient(to right, #e1e8fc, #e8eefd, #e1e8fc);
+  }
+  .title-card {
+    width: 100%;
+    background: linear-gradient(to right, #cdced7, #cfd1d8, #cdd1d7);
+    border-radius: 8px;
+    &.active {
+      background: linear-gradient(to right, #91a5fb, #97b4fb, #95c6fb);
+    }
+  }
+}
+
+.arrange-wrapper {
+  position: relative;
+  .step-before {
+    position: absolute;
+    top: 14px;
+    left: 0px;
+  }
+  .step-after {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+  }
+}

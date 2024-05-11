@@ -1,0 +1,18 @@
+{
+  "project-intro-name": {
+    "zh": "Bio-OS 功能介绍",
+    "en": "Why use Bio-OS"
+  },
+  "project-intro-detail-part1": {
+    "zh": "火山引擎生信操作系统 Bio-OS 是火山引擎提供的低门槛，低成本，极速的云上基因分析平台；基于Serverless 架构实现了标准生信工作流引擎和多种三级分析引擎支持，帮助生信科研人员、生物科技公司，农业育种公司快速构建基础能力。",
+    "en": "Bio-OS  is a low-threshold, low-cost, and high-speed cloud-based genetic analysis platform provided by Volcano Engine. Bio-OS is based on Serverless architecture to realize the standard bioinformatics workflow engine and support for various tertiary analysis engines, helping bioinformatics researchers, biotech companies, and agricultural breeding companies to quickly build basic capabilities."
+  },
+  "project-intro-detail-part2": {
+    "zh": "云原生在离线调度技术积累（音视频转码，AI ，批量大数据分析等）用互联网技术赋能生信基因分析。",
+    "en": "Cloud-native technology in offline scheduling (such as audio and video transcoding, AI, batch big data analysis, etc.) is used to enable bioinformatics and genetic analysis with Internet technology."
+  },
+  "guide": {
+    "zh": "指南",
+    "en": "Guide"
+  }
+}
