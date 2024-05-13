@@ -18,6 +18,7 @@ const CompetitionPage = () => {
         backgroundImage: `url(${introBg})`,
         backgroundSize: "100% auto",
         backgroundRepeat: "no-repeat",
+        backgroundColor: '#F4F4FE'
       }}
     >
       <div>

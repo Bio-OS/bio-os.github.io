@@ -1,7 +1,7 @@
 [
   {
     "text": "指南",
-    "link": "https://www.volcengine.com/docs/6971/164533"
+    "link": "https://bio-os.gitbook.io/userguide"
   },
   {
     "text": "活动",
@@ -15,8 +15,7 @@
   },
   {
     "text": "关于",
-    "link": "/about/",
-    "activeMatch": "/about/"
+    "link": "https://www.volcengine.com/docs/6971/164533"
   },
   {
     "text": "生态",

@@ -18,7 +18,7 @@ const Slide = ({ imageSrc, dir }) => {
           style={{ width: "50%" }}
         >
           <img
-            src={require(`../../images/${dir}/${name}.png`)}
+            src={require(`../../images/${dir}/${name}.svg`)}
             style={{ width: "100%" }}
           />
         </div>
@@ -50,7 +50,7 @@ const SlideWide = ({ imageSrc, dir }) => {
     </Carousel>
   );
 };
-const imageCommentSrc = getIncrementArray(8);
+const imageCommentSrc = getIncrementArray(10);
 const imageFirstBioOSSrc = getIncrementArray(81);
 
 export const CommentCard = () => (
