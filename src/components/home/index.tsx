@@ -89,11 +89,12 @@ const Home = () => {
         <div className="logo">
           <img src={huoshanIntel} />
         </div>
-        <img src={openTitle} width={'50%'}/>
+        <img src={openTitle} width={"50%"} />
         <div className="mt-[20px] mb-[50px]">
           <JoinButton />
         </div>
-        <div className="flex flex-col h-[204px] justify-between">
+        <img width={"60%"} src={require("../../images/logoGroup.svg")} />
+        {/* <div className="flex flex-col  justify-between">
           <div className="flex items-center">
             <div className="text-[18px] font-bold">指导单位：</div>
             <img
@@ -129,7 +130,7 @@ const Home = () => {
               中国生物信息学学会（筹）、上海生物信息学会、广东省生物信息学学会、南方医科大学、…（持续更新中）
             </div>
           </div>
-        </div>
+        </div> */}
         <img className="timer-divider" src={timerDivider} />
         <img className="timer-cover" src={timerCover} />
         <img className="timer" src={timer} />

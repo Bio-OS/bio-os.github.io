@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
+import Markdown from "react-markdown";
 import "./index.scss";
+import "./markdown.less";
 
 const introContent = [
   {
@@ -47,6 +49,20 @@ const IntroCard = ({
 };
 const Introduction = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [info, setInfo] = useState("");
+  useEffect(() => {
+    fetch(
+      `https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question${activeIndex+1}.md`
+    ).then(async (res) => {
+      const reader = res.body.pipeThrough(new TextDecoderStream()).getReader();
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        // let info = marked.parse(value);
+        setInfo(value);
+      }
+    });
+  }, [activeIndex]);
   return (
     <div className="flex flex-col w-full desc-bg rounded-[12px] py-[40px] px-[30px]">
       <div className="flex justify-between">
@@ -64,12 +80,14 @@ const Introduction = () => {
         })}
       </div>
       <div className="flex-1 iframeWrapper px-[20px] py-[40px] iframe-bg">
-        <iframe
+        <Markdown className="markdown-body">{info}</Markdown>
+      </div>
+      {/* <iframe
           src={introContent[activeIndex].url}
           className="w-full h-[600px] rounded-[12px]"
         ></iframe>
-        <div className="iframeHideHeader"></div>
-      </div>
+        <div className="iframeHideHeader"></div> */}
+      {/* </div> */}
     </div>
   );
 };
