@@ -1,0 +1,1 @@
+export const tosDomain = 'https://lf-opensource.bytetos.com/obj/opensource-cn/';

@@ -1,6 +1,7 @@
+import { tosDomain } from "../const";
 import { JoinButton } from "../home";
 const feishu = require("../../images/qrcode/feishuGroup.png");
-const weixin = require("../../images/qrcode/weixin.png");
+const weixin = `${tosDomain}bioos_weixinGroup.png`;
 const zhushou = require("../../images/qrcode/zhushou.png");
 
 import "./index.scss";

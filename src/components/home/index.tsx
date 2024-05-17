@@ -8,6 +8,7 @@ const huoshanIntel = require("../../images/logo/huoshanIntel.png");
 const introFinger = require("../../images/introFinger.png");
 
 import "./index.scss";
+import { tosDomain } from "../const";
 
 const info = [
   {
@@ -21,7 +22,7 @@ const info = [
     imgSrc: require("../../images/buttonBg/group.png"),
     iconSrc: require("../../images/icon/group.png"),
     jumpUrl: "",
-    hoverUrl: require("../../images/qrcode/weixin.png"),
+    hoverUrl: `${tosDomain}bioos_weixinGroup.png`,
   },
   {
     name: "赛前辅导",
@@ -30,7 +31,7 @@ const info = [
     jumpUrl: "",
   },
 ];
-const mainContent = `2023年火山引擎联合广州实验室举办第一届Bio-OS开源开放大赛，在短时间筹备期内，取得丰硕成果。2024年，火山引擎和intel联合举办第二届Bio-OS开源开放大赛，本次大赛主要面向全国生信领域的高校师生、相关企业组织、以及科研机构等，大赛以“开源共赢，科学无限”为宗旨，将有效构建Bio-OS社区的开源生态，推动生信领域的交流与合作，为火山引擎和intel构建一个“开放、创新、合作、共赢”的技术和商业氛围；同时，通过大赛牵引，将围绕Bio-OS建立了技术社区（SIG组），为行业成功发掘一批优秀人才。`;
+const mainContent = `CCF开源创新大赛暨第二届Bio-OS开源开放大赛是在中国计算机学会和广州实验室指导下，由火山引擎和Intel联合主办的一项生物信息领域的全国性公益大赛，协办单位包括中国计算机学会开源发展委员会、中国生物信息学学会（筹）、上海生物信息学会、广东省生物信息学会，公益支持单位是中国光华科技基金。大赛以“开源共赢，科学无限”为宗旨，面向全国生物信息领域的高校师生、科研工作者、以及相关企业和组织等邀请参赛，希望通过大赛牵引和开源开放的Bio-OS平台支撑，推动国内生物信息领域的交流与合作，共建一个“开放、创新、合作、共赢”的新生态。`;
 const HomeCard = ({ item }) => {
   const { imgSrc, iconSrc, name, jumpUrl, hoverUrl } = item;
   return (
@@ -89,11 +90,11 @@ const Home = () => {
         <div className="logo">
           <img src={huoshanIntel} />
         </div>
-        <img src={openTitle} width={"50%"} />
-        <div className="mt-[20px] mb-[50px]">
+        <img src={openTitle} width={"60%"} />
+        {/* <div className="mt-[20px] mb-[50px]">
           <JoinButton />
-        </div>
-        <img width={"60%"} src={require("../../images/logoGroup.svg")} />
+        </div> */}
+        {/* <img width={"60%"} src={require("../../images/logoGroup.svg")} /> */}
         {/* <div className="flex flex-col  justify-between">
           <div className="flex items-center">
             <div className="text-[18px] font-bold">指导单位：</div>
@@ -146,8 +147,8 @@ const Home = () => {
         })}
       </div>
       <div className="flex flex-col items-center text-[#213547]">
-        <div className="text-[28px] font-medium mb-[30px]">
-          Bio-OS开源开放大赛
+        <div className="text-[36px] font-medium mb-[30px]">
+          大赛介绍
         </div>
         <div className="flex items-center py-[24px] px-[32px] rounded-[12px] desc-bg">
           <div>{mainContent}</div>

@@ -39,7 +39,7 @@ const SlideWide = ({ imageSrc, dir }) => {
         <div
           key={index}
           className="rounded-[16px] h-full"
-          style={{ width: "50%" }}
+          style={{ width: "46%" }}
         >
           <img
             src={require(`../../images/${dir}/${name}.png`)}
@@ -54,7 +54,10 @@ const imageCommentSrc = getIncrementArray(10);
 const imageFirstBioOSSrc = getIncrementArray(81);
 
 export const CommentCard = () => (
-  <Slide imageSrc={imageCommentSrc} dir={"teacher"} />
+  // <Slide imageSrc={imageCommentSrc} dir={"teacher"} />
+  <div className="w-full">
+    <img src={require('../../images/allTeacher.svg')}/>
+  </div>
 );
 export const AnswerCard = () => (
   <SlideWide imageSrc={imageFirstBioOSSrc} dir={"bioosFirst"} />

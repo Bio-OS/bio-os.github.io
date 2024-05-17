@@ -9,6 +9,7 @@ import Award, { Community } from "./components/award";
 import { AnswerCard, CommentCard } from "./components/comment";
 import FAQ from "./components/faq";
 import { Divider } from "@arco-design/web-react";
+import { tosDomain } from "./components/const";
 
 const CompetitionPage = () => {
   return (
@@ -18,7 +19,7 @@ const CompetitionPage = () => {
         backgroundImage: `url(${introBg})`,
         backgroundSize: "100% auto",
         backgroundRepeat: "no-repeat",
-        backgroundColor: '#F4F4FE'
+        backgroundColor: "#F4F4FE",
       }}
     >
       <div>
@@ -50,7 +51,19 @@ const CompetitionPage = () => {
         <div className="w-[1344px]">
           <Title title={"赛事交流"} />
           <Community />
+          <Title title={"组织体系&合作伙伴"} />
+          <div>
+            <img src={`${tosDomain}bioos_co.svg`}/>
+          </div>
           <Divider className="mt-[90px] mb-[50px]" />
+          <div
+            className="rounded-[12px] px-[50px] py-[5px] cursor-pointer text-[20px] font-bold w-fit button-bg"
+            style={{
+              color: "white",
+            }}
+          >
+            Bio-OS开源开放大赛
+          </div>
         </div>
       </div>
     </div>
