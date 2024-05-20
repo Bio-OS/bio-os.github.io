@@ -25,3 +25,25 @@
 .iframe-bg {
   background: linear-gradient(to right, #c8dffb 30%,#cfdffc 50%,#d0d9fc 80%, #cbd1fc 99%);
 }
+.mdTable {
+  border-collapse: collapse;
+
+  & > thead {
+    background-color: #CBD2FC;
+  }
+
+  // & tbody > tr {
+  //   &:hover,
+  //   &:nth-of-type(even) {
+  //     background-color: #CBD2FC;
+  //   }
+  // }
+
+  & th,
+  & td {
+    text-align: left;
+    padding: 2px 8px;
+    border: 1px solid var(--color-neutral-3);
+    min-width: 40px;
+  }
+}

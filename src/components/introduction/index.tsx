@@ -1,8 +1,16 @@
-import { useEffect, useState } from "react";
+import {
+  AnchorHTMLAttributes,
+  ImgHTMLAttributes,
+  TableHTMLAttributes,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import classNames from "classnames";
 import Markdown from "react-markdown";
 import "./index.scss";
 import "./markdown.less";
+import remarkGfm from "remark-gfm";
 
 const introContent = [
   {
@@ -50,9 +58,31 @@ const IntroCard = ({
 const Introduction = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [info, setInfo] = useState("");
+  const componets = useMemo(
+    () => ({
+      a(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
+        return (
+          <a
+            {...props}
+            // #开头表示自动生成的TOC跳转
+            target={props.href?.startsWith("#") ? undefined : "_blank"}
+          />
+        );
+      },
+      table(props: TableHTMLAttributes<HTMLTableElement>) {
+        return <table {...props} className={"mdTable"} />;
+      },
+      img(props: ImgHTMLAttributes<HTMLImageElement>) {
+        return <img {...props} className="r-max-w-[90%] r-block r-mx-auto" />;
+      },
+    }),
+    []
+  );
   useEffect(() => {
     fetch(
-      `https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question${activeIndex+1}.md`
+      `https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question${
+        activeIndex + 1
+      }.md`
     ).then(async (res) => {
       const reader = res.body.pipeThrough(new TextDecoderStream()).getReader();
       while (true) {
@@ -80,7 +110,13 @@ const Introduction = () => {
         })}
       </div>
       <div className="flex-1 iframeWrapper px-[20px] py-[40px] iframe-bg">
-        <Markdown className="markdown-body">{info}</Markdown>
+        <Markdown
+          className="markdown-body"
+          components={componets}
+          remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
+        >
+          {info}
+        </Markdown>
       </div>
       {/* <iframe
           src={introContent[activeIndex].url}
