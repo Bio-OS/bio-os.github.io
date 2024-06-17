@@ -1,0 +1,21 @@
+{
+  "aiFiles": [
+    {
+      "name": "细胞状态与类型的高精度鉴定",
+      "desc": "赛题一细胞状态与类型的高精度鉴定公开数据",
+      "url": "https://2ndbioos-competition-data.tos-cn-beijing.volces.com/%E8%B5%9B%E9%A2%98%E4%B8%80%E7%BB%86%E8%83%9E%E7%8A%B6%E6%80%81%E6%95%B0%E6%8D%AE.zip"
+    },
+    {
+      "name": "抗体和抗原结合能力预测",
+      "desc": "赛题二抗体和抗原结合能力预测pdb处理文件",
+      "url": "https://2ndbioos-competition-data.tos-cn-beijing.volces.com/%E8%B5%9B%E9%A2%98%E4%BA%8Cpdb%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6.zip"
+    },
+    {
+      "name": "抗体和抗原结合能力预测",
+      "desc": "赛题二抗体和抗原结合能力预测公开数据",
+      "url": "https://2ndbioos-competition-data.tos-cn-beijing.volces.com/%E8%B5%9B%E9%A2%98%E4%BA%8C%E6%8A%97%E4%BD%93%E9%A2%84%E6%B5%8B%E6%95%B0%E6%8D%AE.zip"
+    }
+  ],
+  "paperFiles": [],
+  "taskFiles": []
+}

@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "strict": true,
     "jsx": "react-jsx",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "paths": {
       "i18n": ["./i18n.json"]
     }

@@ -16,10 +16,9 @@ export const getIncrementArray = (len) => {
     arr.push(i);
   }
   return arr;
-}
+};
 
 const timeDivider = ["2024.8.30", "2024.9.13", "2024.10.12"];
-
 
 // 获取赛程进度
 export const getCurrentStep = () => {
@@ -31,4 +30,33 @@ export const getCurrentStep = () => {
     }
   }
   return 4;
+};
+
+export const downloadFile = (url: string, name?: string) => {
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = name || "";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
+
+export async function getTosFile(url: string, options?: { type?: "json" }) {
+  // https://2ndbioos-competition-data.tos-cn-beijing.volces.com/metadata.json
+  const content = await fetch(url).then(
+    async (res) => {
+      const body = await (options?.type === "json" ? res.json() : res.text());
+
+      if (res.ok) {
+        return { content: body, status: "ok" };
+      } else {
+        return { content: body, status: "failed" };
+      }
+    },
+    (err) => {
+      return { content: err, status: "failed" };
+    }
+  );
+
+  return content;
 }

@@ -25,10 +25,10 @@ const info = [
     hoverUrl: `${tosDomain}bioos_weixinGroup.png`,
   },
   {
-    name: "赛前辅导",
+    name: "赛事辅导",
     imgSrc: require("../../images/buttonBg/help.png"),
     iconSrc: require("../../images/icon/help.png"),
-    jumpUrl: "",
+    jumpUrl: "/activity/help",
   },
 ];
 const mainContent = `CCF开源创新大赛暨第二届Bio-OS开源开放大赛是在中国计算机学会和广州实验室指导下，由火山引擎和Intel联合主办的一项生物信息领域的全国性公益大赛，协办单位包括中国计算机学会开源发展委员会、中国生物信息学学会（筹）、上海生物信息学会、广东省生物信息学会，公益支持单位是中国光华科技基金。大赛以“开源共赢，科学无限”为宗旨，面向全国生物信息领域的高校师生、科研工作者、以及相关企业和组织等邀请参赛，希望通过大赛牵引和开源开放的Bio-OS平台支撑，推动国内生物信息领域的交流与合作，共建一个“开放、创新、合作、共赢”的新生态。`;
@@ -147,9 +147,7 @@ const Home = () => {
         })}
       </div>
       <div className="flex flex-col items-center text-[#213547]">
-        <div className="text-[36px] font-medium mb-[30px]">
-          大赛介绍
-        </div>
+        <div className="text-[36px] font-medium mb-[30px]">大赛介绍</div>
         <div className="flex items-center py-[24px] px-[32px] rounded-[12px] desc-bg">
           <div>{mainContent}</div>
           <img src={introFinger} />
