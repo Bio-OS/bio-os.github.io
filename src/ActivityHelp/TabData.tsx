@@ -48,15 +48,15 @@ export default function TabData() {
       <Tabs type="card-gutter">
         <Tabs.TabPane key="1" title="论文挑战赛">
           <FileCardList files={metadata?.paperFiles} />
-          <MarkdownUrl url="https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question1.md" />
+          <MarkdownUrl url="https://2ndbioos-competition-data.tos-cn-beijing.volces.com/exam/1.md" />
         </Tabs.TabPane>
         <Tabs.TabPane key="2" title="任务挑战赛">
           <FileCardList files={metadata?.taskFiles} />
-          <MarkdownUrl url="https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question2.md" />
+          <MarkdownUrl url="https://2ndbioos-competition-data.tos-cn-beijing.volces.com/exam/2.md" />
         </Tabs.TabPane>
         <Tabs.TabPane key="3" title="AI算法赛">
           <FileCardList files={metadata?.aiFiles} />
-          <MarkdownUrl url="https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question3.md" />
+          <MarkdownUrl url="https://2ndbioos-competition-data.tos-cn-beijing.volces.com/exam/3.md" />
         </Tabs.TabPane>
       </Tabs>
     </>

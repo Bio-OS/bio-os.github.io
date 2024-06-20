@@ -80,7 +80,7 @@ const Introduction = () => {
   );
   useEffect(() => {
     fetch(
-      `https://lf-opensource.bytetos.com/obj/opensource-cn/bioos_question${
+      `https://2ndbioos-competition-data.tos-cn-beijing.volces.com/exam/${
         activeIndex + 1
       }.md`
     ).then(async (res) => {

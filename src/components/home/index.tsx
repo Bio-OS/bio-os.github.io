@@ -25,7 +25,7 @@ const info = [
     hoverUrl: `${tosDomain}bioos_weixinGroup.png`,
   },
   {
-    name: "赛事辅导",
+    name: "结果提交",
     imgSrc: require("../../images/buttonBg/help.png"),
     iconSrc: require("../../images/icon/help.png"),
     jumpUrl: "/activity/help",
