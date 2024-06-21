@@ -51,7 +51,7 @@ const SlideWide = ({ imageSrc, dir }) => {
   );
 };
 const imageCommentSrc = getIncrementArray(10);
-const imageFirstBioOSSrc = getIncrementArray(81);
+const imageFirstBioOSSrc = getIncrementArray(5);
 
 export const CommentCard = () => (
   // <Slide imageSrc={imageCommentSrc} dir={"teacher"} />
