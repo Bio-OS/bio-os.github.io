@@ -1,18 +1,26 @@
-import { Button, Message, Tabs, Upload } from "@arco-design/web-react";
+import {
+  Button,
+  Form,
+  Input,
+  Message,
+  Tabs,
+  Upload,
+} from "@arco-design/web-react";
 import { UploadItem } from "@arco-design/web-react/es/Upload";
 import { IconCheck } from "@arco-design/web-react/icon";
-import { PutObjectCommand, S3, S3Client } from "@aws-sdk/client-s3";
+import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { useState } from "react";
 
 export default function TabResult() {
   const [file, setFile] = useState<UploadItem>();
   const [uploading, setUploading] = useState(false);
+  const [form] = Form.useForm();
 
-  const upload = () => {
+  const upload = (phoneNumber: string) => {
     if (!file) return;
 
     const formData = new FormData();
-    formData.append("key", `${file.name}`);
+    formData.append("key", `submissions/${phoneNumber}/${file.name}`);
     formData.append("file", file.originFile!);
 
     setUploading(true);
@@ -104,24 +112,56 @@ export default function TabResult() {
             </div>
           </div>
 
-          <div className="font-medium mb-4">
-            当前已选压缩包：
-            <span style={{ color: "#1664FF" }}>{file?.name || "-"}</span>
-          </div>
+          <Form
+            form={form}
+            style={{ width: 600 }}
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 18 }}
+            labelAlign="left"
+            onSubmit={(values) => {
+              upload(values.phoneNumber);
+            }}
+          >
+            <Form.Item required label={<span>当前已选压缩包</span>}>
+              <div style={{ color: "#1664FF" }} className="text-sm">
+                {file?.name || "-"}
+              </div>
+            </Form.Item>
+            <Form.Item
+              required
+              label={<span>参赛手机号码</span>}
+              rules={[
+                {
+                  validator(value, callback) {
+                    if (!value) {
+                      return callback("不能为空");
+                    }
 
-          <div>
-            <Button
-              icon={<IconCheck />}
-              type="primary"
-              loading={uploading}
-              disabled={!file}
-              onClick={() => {
-                upload();
-              }}
+                    const val = value as string;
+                    if (/^1[0-9]{10}$/.test(val)) {
+                      return callback();
+                    }
+                    return callback("格式不正确");
+                  },
+                },
+              ]}
+              field="phoneNumber"
             >
-              {uploading ? "正在提交" : "确认提交"}
-            </Button>
-          </div>
+              <Input placeholder="请输入" />
+            </Form.Item>
+
+            <div>
+              <Button
+                icon={<IconCheck />}
+                type="primary"
+                htmlType="submit"
+                loading={uploading}
+                disabled={!file}
+              >
+                {uploading ? "正在提交" : "确认提交"}
+              </Button>
+            </div>
+          </Form>
         </Tabs.TabPane>
         <Tabs.TabPane key="2" title="任务挑战赛">
           敬请期待
