@@ -7,3 +7,11 @@
 .arco-form-item-symbol {
   display: inline-block;
 }
+
+.rankTabs .arco-tabs-content {
+  height: unset;
+}
+
+.rankTabs .arco-tabs-header-wrapper {
+  justify-content: left !important;
+}
