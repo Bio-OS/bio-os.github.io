@@ -5,7 +5,10 @@ export const getDiffDay = (date1, date2) => {
   if (typeof date2 === "string") {
     date2 = Date.parse(date2);
   }
-  const diffTime = Math.abs(date1 - date2);
+  const diffTime = date1 - date2;
+  if (diffTime <= 0) {
+    return "0";
+  }
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   return diffDays < 10 ? `0${diffDays}` : diffDays;
 };

@@ -14,36 +14,40 @@
     top: 50%;
     transform: translateY(-50%);
     right: 100px;
+    .timer-cover {
+      z-index: 2;
+      position: absolute;
+      bottom: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timer-text {
+      position: absolute;
+      z-index: 4;
+      width: 160px;
+      font-weight: 500;
+      font-size: 20px;
+      color: white;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .timer-day {
+      position: absolute;
+      z-index: 9999;
+      font-weight: 500;
+      font-size: 110px;
+      color: white;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   .timer-divider {
     position: absolute;
     top: 52%;
     transform: translateY(-50%);
     right: 122px;
-  }
-  .timer-cover {
-    z-index: 2;
-    position: absolute;
-    top: 53%;
-    right: 132px;
-  }
-  .timer-text {
-    position: absolute;
-    z-index: 3;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
-    top: 36%;
-    right: 164px;
-  }
-  .timer-day {
-    position: absolute;
-    z-index: 3;
-    font-weight: 500;
-    font-size: 110px;
-    color: white;
-    top: 38%;
-    right: 156px;
   }
 }
 

@@ -82,7 +82,7 @@ export const JoinButton = ({ textColor = "white" }) => {
     </div>
   );
 };
-const restDay = getDiffDay("2024-08-30", Date.now());
+const restDay = getDiffDay("2024-09-30", Date.now());
 const Home = () => {
   return (
     <div className="flex flex-col items-center">
@@ -91,54 +91,15 @@ const Home = () => {
           <img src={huoshanIntel} />
         </div>
         <img src={openTitle} width={"60%"} />
-        {/* <div className="mt-[20px] mb-[50px]">
-          <JoinButton />
-        </div> */}
-        {/* <img width={"60%"} src={require("../../images/logoGroup.svg")} /> */}
-        {/* <div className="flex flex-col  justify-between">
-          <div className="flex items-center">
-            <div className="text-[18px] font-bold">指导单位：</div>
-            <img
-              className="h-[26px] mr-[8px]"
-              src={require("../../images/logo/ccf.png")}
-            ></img>
-            <img
-              className="h-[30px]"
-              src={require("../../images/logo/guangshi.png")}
-            ></img>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[18px] font-bold">主办单位：</div>
-            <img
-              className="h-[24px] mr-[16px]"
-              src={require("../../images/logo/volc.png")}
-            ></img>
-            <img
-              className="h-[22px]"
-              src={require("../../images/logo/intelIcon.png")}
-            ></img>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[18px] font-bold">协办单位：</div>
-            <img
-              className="h-[26px] mr-[16px]"
-              src={require("../../images/logo/ccfWeiyuan.png")}
-            ></img>
-          </div>
-          <div className="flex items-center">
-            <div className="text-[18px] font-bold">
-              合作单位：
-              中国生物信息学学会（筹）、上海生物信息学会、广东省生物信息学学会、南方医科大学、…（持续更新中）
-            </div>
-          </div>
-        </div> */}
         <img className="timer-divider" src={timerDivider} />
-        <img className="timer-cover" src={timerCover} />
-        <img className="timer" src={timer} />
-        <div className="timer-text">距离报名截止还剩</div>
-        <div className="timer-day">
-          {restDay}
-          <span className="text-[20px]">天</span>
+        <div className="timer">
+          <img src={timer} width={"100%"} />
+          <img className="timer-cover" src={timerCover} />
+          <div className="timer-text">距离报名截止还剩</div>
+          <div className="timer-day">
+            {restDay}
+            <span className="text-[20px]">天</span>
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-between w-[1100px]">
