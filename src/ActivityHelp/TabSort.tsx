@@ -9,10 +9,10 @@ export default function TabSort() {
 
       <Tabs type="card-gutter" destroyOnHide>
         <Tabs.TabPane key="1" title="论文挑战赛">
-          敬请期待
+          <TableRank url="https://2ndbioos-competition-data.tos-cn-beijing.volces.com/bioos-web-config/rank-paper.json" />
         </Tabs.TabPane>
         <Tabs.TabPane key="2" title="任务挑战赛">
-          敬请期待
+          <TableRank url="https://2ndbioos-competition-data.tos-cn-beijing.volces.com/bioos-web-config/rank-task.json" />
         </Tabs.TabPane>
         <Tabs.TabPane key="3" title="AI算法赛">
           <Tabs type="capsule" className="rankTabs">
