@@ -4,20 +4,18 @@ on:
   push:
     branches:
       - main
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6 
         with:
           fetch-depth: 0
 
       - name: Mirror code to Codeberg
-        uses: yesolutions/mirror-action@master
+        uses: yesolutions/mirror-action@master 
         with:
           REMOTE: 'https://codeberg.org/Bio-OS/bio-os.github.io.git'
           GIT_USERNAME: zhaoqiang_li
