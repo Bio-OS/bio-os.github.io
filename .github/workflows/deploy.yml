@@ -21,23 +21,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6 
+        uses: actions/checkout@v6 # 已升级，原生适配 Node 24
         with:
           fetch-depth: 0 
       - name: Setup Node
-        uses: actions/setup-node@v6 
+        uses: actions/setup-node@v6 # 已升级，原生适配 Node 24
         with:
-          node-version: 20
+          node-version: 20 # 🌟 这里保留 20 依然安全，这是您编译项目的版本，与 Action 宿主环境不冲突
           cache: npm
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v6 # 已升级，原生适配 Node 24
       - name: Install dependencies
         run: npm install
       - name: Build with Rspress
         run: |
           npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5 # 🚀【关键修改】从 v3 升级到 v5，它内部引用的 upload-artifact 终于适配了 Node 24！
         with:
           path: doc_build
 
@@ -52,4 +52,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5 # 已升级，原生适配 Node 24
