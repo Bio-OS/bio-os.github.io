@@ -4,8 +4,9 @@
     "en": "Why use Bio-OS"
   },
   "project-intro-detail-part1": {
-    "zh": "广州实验室大湾区生物信息中心生信操作系统 Bio-OS 是火山引擎提供的低门槛，低成本，极速的云上基因分析平台。",
-    "en": "Bio-OS is an accessible, cost-effective, and high-performance cloud-native platform for genetic analysis, developed by the Guangzhou Laboratory Guangdong-Hong Kong-Macao Greater Bay Center of Bioinformation."
+    "zh": "由广州实验室粤港澳大湾区生物信息中心自主研发的 Bio-OS（生物医学大数据操作系统），致力于为基因分析提供易用、经济、高效的云端平台部署方案。",
+    "en": "Developed by the Guangzhou Laboratory Guangdong-Hong Kong-Macao Greater Bay Center of Bioinformation, Bio-OS is a biomedical big data operating system that provides user-friendly, economical, and high-throughput cloud deployment solutions for genetic analysis.
+"
   },
   "guide": {
     "zh": "指南",
